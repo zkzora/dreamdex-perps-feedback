@@ -1,0 +1,86 @@
+{
+  "collectedAtUtc": "2026-10-22T15:31:12.589Z",
+  "sdk": "@somnia-chain/markets-sdk@0.32.1",
+  "node": "v24.16.0",
+  "network": "Offline SDK conversion; decimal scales used by Somnia Tokyo perp markets",
+  "wallet": null,
+  "docs": "https://prd.smk.somnia.host/docs/typescript/api/index/functions/fromHuman",
+  "cases": [
+    {
+      "decimals": 6,
+      "input": "1.0000009",
+      "raw": "1000001",
+      "output": "1.000001"
+    },
+    {
+      "decimals": 7,
+      "input": "1.00000009",
+      "raw": "10000001",
+      "output": "1.0000001"
+    },
+    {
+      "decimals": 8,
+      "input": "1.000000009",
+      "raw": "100000001",
+      "output": "1.00000001"
+    },
+    {
+      "decimals": 9,
+      "input": "1.0000000009",
+      "raw": "1000000001",
+      "output": "1.000000001"
+    },
+    {
+      "decimals": 18,
+      "input": "1.0000000000000000009",
+      "raw": "1000000000000000001",
+      "output": "1.000000000000000001"
+    },
+    {
+      "decimals": 24,
+      "input": "1.0000000000000000000000009",
+      "raw": "1000000000000000000000001",
+      "output": "1.000000000000000000000001"
+    }
+  ],
+  "controls": {
+    "exact": "1123456",
+    "trailingZeros": "1123456",
+    "numberRounding": "123457",
+    "invalidNumbers": [
+      {
+        "input": "NaN",
+        "accepted": false,
+        "error": "InvalidInputError"
+      },
+      {
+        "input": "Infinity",
+        "accepted": false,
+        "error": "InvalidInputError"
+      },
+      {
+        "input": "-Infinity",
+        "accepted": false,
+        "error": "InvalidInputError"
+      }
+    ]
+  },
+  "tiny": {
+    "input": "0.0000009",
+    "decimals": 6,
+    "raw": "1",
+    "output": "0.000001"
+  },
+  "negative": {
+    "input": "-1.0000009",
+    "decimals": 6,
+    "raw": "-1000001",
+    "output": "-1.000001"
+  },
+  "wholeBoundary": {
+    "input": "0.999999999",
+    "decimals": 8,
+    "raw": "100000000",
+    "output": "1"
+  }
+}

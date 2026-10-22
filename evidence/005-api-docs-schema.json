@@ -1,0 +1,38 @@
+{
+  "collectedAtUtc": "2026-10-22T15:29:05.416965+00:00",
+  "sdk": "not applicable",
+  "wallet": null,
+  "docs": [
+    {
+      "url": "https://app.testnet.dreamdex.io/docs/developers/http-api/trading",
+      "articleText": "\nTrading\n\nThese endpoints provide access to trade history, ticker snapshots, and candlestick data for a given market. The Order Management section covers preparing, querying, reducing, and cancelling orders, and Trade History returns your executed fills.\n\nNote that the prepare-order endpoint returns an unsigned transaction \u2014 the client must sign and broadcast it to the Somnia network. See the Quick Start guide for a full walkthrough.\n\n\nTaker orders need a crossing limit price. A marketable (IOC/FOK) order only fills against resting liquidity priced at or through its limit: a buy must price at or above the best ask, a sell at or below the best bid. A price of 0 (raw priceRaw = 0) never crosses the book and produces no fill. Set a limit that crosses, bounded by your slippage tolerance.\n\n\nGET /v0/markets/{symbol}/trades\n\nGET /v0/markets/{symbol}/tickers\n\nGET /v0/markets/{symbol}/candles\n\nOrder Management\n\nPOST /v0/markets/{symbol}/orders\n\nGET /v0/markets/{symbol}/orders/{id}\n\nA resting order can be shrunk without cancelling it. newQuantityRemaining must be at or below the current remaining quantity, at least minQuantity, and a multiple of lotSize; the order's fullQuantity and quantityRemaining both decrease by the difference. Like placing an order, this returns an unsigned transaction to sign and broadcast.\n\nPATCH /v0/markets/{symbol}/orders/{id}/reduce\n\nDELETE /v0/markets/{symbol}/orders/{id}\n\nGET /v0/markets/{symbol}/orders\n\nTo fetch open and historical orders across several markets in one call, use the unscoped endpoint below. Omit symbols to cover every available market; unknown symbols are silently skipped.\n\nGET /v0/orders\n\nTrade History\n\nThese endpoints return executed fills for the authenticated account. They include trades where the account was either the taker or the maker, returned newest-first. The market-scoped trades/mine and the unscoped /v0/trades (which spans several markets in one call and tags each trade with its symbol) operate on the caller's own account. The trades/{address} variant returns fills for any wallet and is restricted to bearer tokens carrying the trades:read_any scope.\n\nGET /v0/markets/{symbol}/trades/mine\n\nGET /v0/trades\n\nGET /v0/markets/{symbol}/trades/{address}",
+      "articleLinks": [
+        "#order-management",
+        "#trade-history",
+        "/docs/welcome/quick-start"
+      ],
+      "candleSection": "GET /v0/markets/{symbol}/candles",
+      "onlyEndpointHeading": true
+    },
+    {
+      "url": "https://app.dreamdex.io/docs/developers/http-api/trading",
+      "articleText": "\nTrading\n\nThese endpoints provide access to trade history, ticker snapshots, and candlestick data for a given market. The Order Management section covers preparing, querying, reducing, and cancelling orders, and Trade History returns your executed fills.\n\nNote that the prepare-order endpoint returns an unsigned transaction \u2014 the client must sign and broadcast it to the Somnia network. See the Quick Start guide for a full walkthrough.\n\n\nTaker orders need a crossing limit price. A marketable (IOC/FOK) order only fills against resting liquidity priced at or through its limit: a buy must price at or above the best ask, a sell at or below the best bid. A price of 0 (raw priceRaw = 0) never crosses the book and produces no fill. Set a limit that crosses, bounded by your slippage tolerance.\n\n\nGET /v0/markets/{symbol}/trades\n\nGET /v0/markets/{symbol}/tickers\n\nGET /v0/markets/{symbol}/candles\n\nOrder Management\n\nPOST /v0/markets/{symbol}/orders\n\nGET /v0/markets/{symbol}/orders/{id}\n\nA resting order can be shrunk without cancelling it. newQuantityRemaining must be at or below the current remaining quantity, at least minQuantity, and a multiple of lotSize; the order's fullQuantity and quantityRemaining both decrease by the difference. Like placing an order, this returns an unsigned transaction to sign and broadcast.\n\nPATCH /v0/markets/{symbol}/orders/{id}/reduce\n\nDELETE /v0/markets/{symbol}/orders/{id}\n\nGET /v0/markets/{symbol}/orders\n\nTo fetch open and historical orders across several markets in one call, use the unscoped endpoint below. Omit symbols to cover every available market; unknown symbols are silently skipped.\n\nGET /v0/orders\n\nTrade History\n\nThese endpoints return executed fills for the authenticated account. They include trades where the account was either the taker or the maker, returned newest-first. The market-scoped trades/mine and the unscoped /v0/trades (which spans several markets in one call and tags each trade with its symbol) operate on the caller's own account. The trades/{address} variant returns fills for any wallet and is restricted to bearer tokens carrying the trades:read_any scope.\n\nGET /v0/markets/{symbol}/trades/mine\n\nGET /v0/trades\n\nGET /v0/markets/{symbol}/trades/{address}",
+      "articleLinks": [
+        "#order-management",
+        "#trade-history",
+        "/docs/welcome/quick-start"
+      ],
+      "candleSection": "GET /v0/markets/{symbol}/candles",
+      "onlyEndpointHeading": true
+    }
+  ],
+  "api": {
+    "url": "https://api.dreamdex.io/v0/markets/SOMI:USDso/candles",
+    "status": 400,
+    "response": {
+      "description": "Query argument interval is required, but not found",
+      "name": "missing_field",
+      "status": 400
+    }
+  }
+}

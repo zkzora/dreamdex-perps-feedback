@@ -1,0 +1,25 @@
+{
+  "collectedAtUtc": "2026-10-22T15:25:24.527441+00:00",
+  "rows": [
+    {
+      "url": "https://api.dreamdex.io/v0/markets/SOMI:USDso/candles",
+      "status": 400,
+      "body": "{\"description\":\"Query argument interval is required, but not found\",\"name\":\"missing_field\",\"status\":400}\n"
+    },
+    {
+      "url": "https://api.dreamdex.io/v0/orders",
+      "status": 401,
+      "body": "{\"description\":\"authentication required\",\"name\":\"unauthorized\",\"status\":401}\n"
+    },
+    {
+      "url": "https://api.dreamdex.io/v0/trades",
+      "status": 401,
+      "body": "{\"description\":\"authentication required\",\"name\":\"unauthorized\",\"status\":401}\n"
+    },
+    {
+      "url": "https://stg.api.dreamdex.io/v0/orders",
+      "status": 401,
+      "body": "{\"description\":\"authentication required\",\"name\":\"unauthorized\",\"status\":401}\n"
+    }
+  ]
+}

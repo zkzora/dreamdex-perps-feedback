@@ -1,0 +1,53 @@
+{
+  "collectedAtUtc": "2026-10-22T15:18:18.210520+00:00",
+  "network": "Somnia Tokyo testnet",
+  "wallet": null,
+  "request": "GET, no cookies, no authentication, redirects recorded individually",
+  "docsSource": "https://app.testnet.dreamdex.io/docs/developers/perps-testnet",
+  "docsLink": [
+    {
+      "url": "https://app.testnet.dreamdex.io/perps",
+      "status": 307,
+      "location": "/trade/perps/tokyo/BTC-PERP"
+    },
+    {
+      "url": "https://app.testnet.dreamdex.io/trade/perps/tokyo/BTC-PERP",
+      "status": 307,
+      "location": "/trade"
+    },
+    {
+      "url": "https://app.testnet.dreamdex.io/trade",
+      "status": 307,
+      "location": "/trade/spot/tokyo/STT:USDso"
+    },
+    {
+      "url": "https://app.testnet.dreamdex.io/trade/spot/tokyo/STT:USDso",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "navigationLink": [
+    {
+      "url": "https://app.testnet.dreamdex.io/trade/perps/tokyo/BTC-PERP",
+      "status": 307,
+      "location": "/trade"
+    },
+    {
+      "url": "https://app.testnet.dreamdex.io/trade",
+      "status": 307,
+      "location": "/trade/spot/tokyo/STT:USDso"
+    },
+    {
+      "url": "https://app.testnet.dreamdex.io/trade/spot/tokyo/STT:USDso",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "spotControl": [
+    {
+      "url": "https://app.testnet.dreamdex.io/trade/spot/tokyo/STT:USDso",
+      "status": 200,
+      "location": null
+    }
+  ]
+}

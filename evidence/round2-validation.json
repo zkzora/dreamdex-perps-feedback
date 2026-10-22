@@ -1,0 +1,358 @@
+{
+  "collectedAtUtc": "2026-10-22T15:27:04.238Z",
+  "sdk": "@somnia-chain/markets-sdk@0.32.1",
+  "node": "v24.16.0",
+  "funding": [
+    {
+      "symbol": "BTC/USDso:USDso",
+      "offsetMs": 0,
+      "since": 1792681903000,
+      "returned": [
+        {
+          "timestamp": 1792681903000,
+          "id": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0_30298868_42"
+        }
+      ],
+      "violatesLowerBound": false
+    },
+    {
+      "symbol": "BTC/USDso:USDso",
+      "offsetMs": 1,
+      "since": 1792681903001,
+      "returned": [
+        {
+          "timestamp": 1792681903000,
+          "id": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0_30298868_42"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "BTC/USDso:USDso",
+      "offsetMs": 999,
+      "since": 1792681903999,
+      "returned": [
+        {
+          "timestamp": 1792681903000,
+          "id": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0_30298868_42"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "BTC/USDso:USDso",
+      "offsetMs": 1000,
+      "since": 1792681904000,
+      "returned": [],
+      "violatesLowerBound": false
+    },
+    {
+      "symbol": "ETH/USDso:USDso",
+      "offsetMs": 0,
+      "since": 1792682358000,
+      "returned": [
+        {
+          "timestamp": 1792682358000,
+          "id": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf_30303409_7"
+        }
+      ],
+      "violatesLowerBound": false
+    },
+    {
+      "symbol": "ETH/USDso:USDso",
+      "offsetMs": 1,
+      "since": 1792682358001,
+      "returned": [
+        {
+          "timestamp": 1792682358000,
+          "id": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf_30303409_7"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "ETH/USDso:USDso",
+      "offsetMs": 999,
+      "since": 1792682358999,
+      "returned": [
+        {
+          "timestamp": 1792682358000,
+          "id": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf_30303409_7"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "ETH/USDso:USDso",
+      "offsetMs": 1000,
+      "since": 1792682359000,
+      "returned": [],
+      "violatesLowerBound": false
+    },
+    {
+      "symbol": "SOL/USDso:USDso",
+      "offsetMs": 0,
+      "since": 1792680855000,
+      "returned": [
+        {
+          "timestamp": 1792680855000,
+          "id": "0xb483ec1fb34996638677c20ab087b16f1896fa53_30288390_14"
+        }
+      ],
+      "violatesLowerBound": false
+    },
+    {
+      "symbol": "SOL/USDso:USDso",
+      "offsetMs": 1,
+      "since": 1792680855001,
+      "returned": [
+        {
+          "timestamp": 1792680855000,
+          "id": "0xb483ec1fb34996638677c20ab087b16f1896fa53_30288390_14"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "SOL/USDso:USDso",
+      "offsetMs": 999,
+      "since": 1792680855999,
+      "returned": [
+        {
+          "timestamp": 1792680855000,
+          "id": "0xb483ec1fb34996638677c20ab087b16f1896fa53_30288390_14"
+        }
+      ],
+      "violatesLowerBound": true
+    },
+    {
+      "symbol": "SOL/USDso:USDso",
+      "offsetMs": 1000,
+      "since": 1792680856000,
+      "returned": [],
+      "violatesLowerBound": false
+    }
+  ],
+  "candles": [
+    {
+      "network": "Tokyo",
+      "symbol": "BTC/USDso:USDso",
+      "since": 1792598400000,
+      "request": {
+        "indexer": "https://hideki-dev.smk.somnia.host/v1/graphql",
+        "query": "query VerifyCandles($where: Candle_bool_exp!, $limit: Int!) {\n  Candle(where: $where, order_by: [{bucketStart: asc}], limit: $limit) { bucketStart openPrice high low closePrice baseVolume }\n}",
+        "variables": {
+          "where": {
+            "pool": {
+              "_eq": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0"
+            },
+            "market_id": {
+              "_eq": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0"
+            },
+            "intervalSeconds": {
+              "_eq": 3600
+            },
+            "bucketStart": {
+              "_gte": 1792598400
+            }
+          },
+          "limit": 2
+        }
+      },
+      "response": {
+        "Candle": [
+          {
+            "bucketStart": "1792598400",
+            "openPrice": "84581000000000000000000",
+            "high": "88000000000000000000000",
+            "low": "84537700000000000000000",
+            "closePrice": "84612300000000000000000",
+            "baseVolume": "4750627000"
+          },
+          {
+            "bucketStart": "1792602000",
+            "openPrice": "84609300000000000000000",
+            "high": "84757800000000000000000",
+            "low": "84432000000000000000000",
+            "closePrice": "84744400000000000000000",
+            "baseVolume": "3519986000"
+          }
+        ]
+      },
+      "expectedTimestamps": [
+        1792598400000,
+        1792602000000
+      ],
+      "actualTimestamps": [
+        1792677600000,
+        1792681200000
+      ],
+      "skippedEarlierRows": true
+    },
+    {
+      "network": "Tokyo",
+      "symbol": "ETH/USDso:USDso",
+      "since": 1792598400000,
+      "request": {
+        "indexer": "https://hideki-dev.smk.somnia.host/v1/graphql",
+        "query": "query VerifyCandles($where: Candle_bool_exp!, $limit: Int!) {\n  Candle(where: $where, order_by: [{bucketStart: asc}], limit: $limit) { bucketStart openPrice high low closePrice baseVolume }\n}",
+        "variables": {
+          "where": {
+            "pool": {
+              "_eq": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf"
+            },
+            "market_id": {
+              "_eq": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf"
+            },
+            "intervalSeconds": {
+              "_eq": 3600
+            },
+            "bucketStart": {
+              "_gte": 1792598400
+            }
+          },
+          "limit": 2
+        }
+      },
+      "response": {
+        "Candle": [
+          {
+            "bucketStart": "1792598400",
+            "openPrice": "2511170000000000000000",
+            "high": "2522920000000000000000",
+            "low": "2499830000000000000000",
+            "closePrice": "2506910000000000000000",
+            "baseVolume": "1821244100000000000000"
+          },
+          {
+            "bucketStart": "1792602000",
+            "openPrice": "2506320000000000000000",
+            "high": "2516720000000000000000",
+            "low": "2500880000000000000000",
+            "closePrice": "2512330000000000000000",
+            "baseVolume": "687727900000000000000"
+          }
+        ]
+      },
+      "expectedTimestamps": [
+        1792598400000,
+        1792602000000
+      ],
+      "actualTimestamps": [
+        1792677600000,
+        1792681200000
+      ],
+      "skippedEarlierRows": true
+    },
+    {
+      "network": "mainnet",
+      "symbol": "SOMI/USDso",
+      "since": 1792598400000,
+      "request": {
+        "indexer": "https://prd.smk.somnia.host/v1/graphql",
+        "query": "query VerifyCandles($where: Candle_bool_exp!, $limit: Int!) {\n  Candle(where: $where, order_by: [{bucketStart: asc}], limit: $limit) { bucketStart openPrice high low closePrice baseVolume }\n}",
+        "variables": {
+          "where": {
+            "pool": {
+              "_eq": "0x035de7403eac6872787779cca7ccf1b4cdb61379"
+            },
+            "market_id": {
+              "_eq": "0x035de7403eac6872787779cca7ccf1b4cdb61379"
+            },
+            "intervalSeconds": {
+              "_eq": 3600
+            },
+            "bucketStart": {
+              "_gte": 1792598400
+            }
+          },
+          "limit": 2
+        }
+      },
+      "response": {
+        "Candle": [
+          {
+            "bucketStart": "1792598400",
+            "openPrice": "190500000000000000",
+            "high": "190900000000000000",
+            "low": "190100000000000000",
+            "closePrice": "190200000000000000",
+            "baseVolume": "188040000000000000000"
+          },
+          {
+            "bucketStart": "1792602000",
+            "openPrice": "190400000000000000",
+            "high": "191000000000000000",
+            "low": "190300000000000000",
+            "closePrice": "190400000000000000",
+            "baseVolume": "189360000000000000000"
+          }
+        ]
+      },
+      "expectedTimestamps": [
+        1792598400000,
+        1792602000000
+      ],
+      "actualTimestamps": [
+        1792677600000,
+        1792681200000
+      ],
+      "skippedEarlierRows": true
+    },
+    {
+      "network": "mainnet",
+      "symbol": "WETH/USDso",
+      "since": 1792598400000,
+      "request": {
+        "indexer": "https://prd.smk.somnia.host/v1/graphql",
+        "query": "query VerifyCandles($where: Candle_bool_exp!, $limit: Int!) {\n  Candle(where: $where, order_by: [{bucketStart: asc}], limit: $limit) { bucketStart openPrice high low closePrice baseVolume }\n}",
+        "variables": {
+          "where": {
+            "pool": {
+              "_eq": "0xa936da11b57b50a344e1293aaae5232885ea2bde"
+            },
+            "market_id": {
+              "_eq": "0xa936da11b57b50a344e1293aaae5232885ea2bde"
+            },
+            "intervalSeconds": {
+              "_eq": 3600
+            },
+            "bucketStart": {
+              "_gte": 1792598400
+            }
+          },
+          "limit": 2
+        }
+      },
+      "response": {
+        "Candle": [
+          {
+            "bucketStart": "1792598400",
+            "openPrice": "2510870000000000000000",
+            "high": "2524440000000000000000",
+            "low": "2502720000000000000000",
+            "closePrice": "2509300000000000000000",
+            "baseVolume": "4671200000000000000"
+          },
+          {
+            "bucketStart": "1792602000",
+            "openPrice": "2507200000000000000000",
+            "high": "2517750000000000000000",
+            "low": "2502080000000000000000",
+            "closePrice": "2513880000000000000000",
+            "baseVolume": "193800000000000000"
+          }
+        ]
+      },
+      "expectedTimestamps": [
+        1792598400000,
+        1792602000000
+      ],
+      "actualTimestamps": [
+        1792677600000,
+        1792681200000
+      ],
+      "skippedEarlierRows": true
+    }
+  ]
+}

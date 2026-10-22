@@ -1,0 +1,19 @@
+{
+  "name": "dreamdex-perps-feedback",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reproducible dreamDEX Perps SDK findings on Somnia Tokyo testnet",
+  "scripts": {
+    "repro:funding": "node repro/001-funding-cursor.mjs",
+    "repro:candles": "node repro/002-candle-pagination.mjs",
+    "repro:routing": "python repro/003-perps-routing.py",
+    "repro:precision": "node repro/004-exact-string-rounding.mjs",
+    "repro:api-docs": "python repro/005-api-docs-schema.py",
+    "validate:round2": "node repro/round2-validation.mjs"
+  },
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "0.32.1",
+    "viem": "^2.18.5"
+  }
+}

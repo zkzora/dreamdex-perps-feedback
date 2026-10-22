@@ -1,0 +1,8 @@
+node_modules/
+research/
+.env
+.env.*
+*.key
+private-findings/
+.superstack/security-reports/
+audits/
