@@ -22,11 +22,11 @@ The funding issue reproduced on BTC, ETH and SOL. The OHLCV issue reproduced on 
 
 ## Submission steps
 
-1. Log in to DoraHacks using the email registered or whitelisted for this bounty.
+1. Log in to your DoraHacks account.
 2. Open https://dorahacks.io/hackathon/dreamdex-perps-bounty/detail and select Submit Build.
 3. Create or select a Build, choose the Feedback track, and enter the title, description and repository URL above.
 4. Complete any account-specific required fields, then submit and verify the Build appears under this hackathon.
 
-Only whitelisted emails can submit. If the account is not whitelisted, use the organizer's dreamDEX Discord ticket or SomniaHacks Telegram group to request it with the email used on DoraHacks.
+Use the Feedback track for this repository. Account-specific eligibility is determined by the submission form.
 
 Official deadline: November 1, 2026, 23:59 UTC, equivalent to November 2, 2026, 06:59 WIB.
